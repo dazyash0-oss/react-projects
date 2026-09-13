@@ -7,16 +7,19 @@ import './styles.css';;
 export default function Accordion() {
 
     const [selected, setSelected] = useState(null);
+    const [enableMultiSelect, setEnableMultiSelect] = useState(false);
+    const [multiple, setMultiple] = useState([]);
 
     function handleSingleSelection(getCurrentId) {
 
-    console.log(getCurrentId);
-    setSelected(getCurrentId === selected ? null : getCurrentId);
+        console.log(getCurrentId);
+        setSelected(getCurrentId === selected ? null : getCurrentId);
 
-}
+    }
 
-console.log(selected);
+    console.log(selected);
     return (<div className="wrapper">
+        <button onClick={() => setEnableMultiSelect(!enableMultiSelect)}>enable multiSelection</button>
         <div className="accordian">
             {data && data.length > 0 ? (
                 data.map(dataItem => (
