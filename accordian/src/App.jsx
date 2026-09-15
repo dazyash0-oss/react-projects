@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import Accordion from './components/accordian'
 import RandomColor from './components/random-color'
+import StarRating from './components/stra-rating'
 
 
 function App() {
@@ -11,11 +12,12 @@ function App() {
   return (
   <>
   {/* accordian  */}
-  <Accordion/>
+  {/* <Accordion/> */}
 
   {/* random color component */}
-  <RandomColor/>
+  {/* <RandomColor/> */}
 
+<StarRating noOfStars={10}/>
   
   </>
   )
