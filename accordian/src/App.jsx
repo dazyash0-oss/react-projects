@@ -12,10 +12,10 @@ function App() {
   return (
   <>
   {/* accordian  */}
-  {/* <Accordion/> */}
+  <Accordion/>
 
   {/* random color component */}
-  {/* <RandomColor/> */}
+  <RandomColor/>
 
 <StarRating noOfStars={10}/>
   
