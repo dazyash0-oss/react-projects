@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 
 
@@ -22,15 +22,28 @@ export default function RandomColor() {
 
             hexColor += hex[randomColorUtility(hex.length)];
         }
-
-        console.log(hexColor);
+        setColor(hexColor);
     }
 
 
     function handleCreateRandomRgbColor() {
+        const r = randomColorUtility(256);
+        const g = randomColorUtility(256);
+        const b = randomColorUtility(256);
 
-
+        setColor(`rgb(${r}, ${g}, ${b})`);
     }
+
+
+
+
+    useEffect(() => {
+
+        if (typeOfcolor === 'rgb') handleCreateRandomRgbColor();
+        else handleCreateRandomHexColor();
+
+
+    },[typeOfcolor])
 
 
     return (<div style={{
@@ -45,11 +58,25 @@ export default function RandomColor() {
         <button onClick={() => setTypeOfColor('rgb')}>
             create rgb color
         </button>
-        <button onClick={typeOfcolor === 'hex' ? handleCreateRandomHexColor : handleCreateRandomiRgbColor
+        <button onClick={typeOfcolor === 'hex' ? handleCreateRandomHexColor : handleCreateRandomRgbColor
         }>
             generate random color
         </button>
-
+        <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: '50px',
+            fontSize: '60px',
+            color: '#fff',
+            flexDirection: 'column',
+            gap:'20px'
+        }}>
+            <h3>{typeOfcolor === 'rgb' ? 'RGB Color' : 'Hex Color'}</h3>
+            <h1>
+                {color}
+            </h1>
+        </div>
 
     </div>
     );
