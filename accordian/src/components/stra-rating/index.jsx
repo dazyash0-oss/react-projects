@@ -12,25 +12,20 @@ export default function StarRating({ noOfstars = 5 }) {
 
         setRating(getCurrentIndex)
 
-
     }
 
     function handleMouseEnter(getCurrentIndex) {
         setHover(getCurrentIndex)
-
-
-    }
-
-
+ }
 
     function handleMouseLeave() {
 
         setHover(rating)
 
-
-
-
     }
+
+
+    
     return (
         <div className="star-rating">
             {
