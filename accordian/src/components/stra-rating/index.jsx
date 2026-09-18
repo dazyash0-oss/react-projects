@@ -23,9 +23,7 @@ export default function StarRating({ noOfstars = 5 }) {
         setHover(rating)
 
     }
-
-
-    
+   
     return (
         <div className="star-rating">
             {

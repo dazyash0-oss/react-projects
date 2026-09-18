@@ -4,22 +4,27 @@ import './App.css'
 import Accordion from './components/accordian'
 import RandomColor from './components/random-color'
 import StarRating from './components/stra-rating'
+import { ImageSlider } from './components/image-slider'
 
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-  <>
-  {/* accordian  */}
-  <Accordion/>
+    <>
+      {/* /* accordian  */}
+      {/* <Accordion/> */}
 
-  {/* random color component */}
-  <RandomColor/>
+      {/* random color component */}
+      {/* <RandomColor/> */}
 
-<StarRating noOfStars={10}/>
-  
-  </>
+      {/* <StarRating noOfStars={10}/>
+    */}
+
+      {/* image slider */}
+
+      <ImageSlider url={'https://picsum.photos/v2/list'} limit={'10'} page={'1'} />
+    </>
   )
 }
 
