@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
-
+import './styles.css';
 
 
 export function ImageSlider({ url, limit = 5, page = 1 }) {
@@ -56,26 +56,42 @@ export function ImageSlider({ url, limit = 5, page = 1 }) {
 
     return (
 
-        <div className="conatiner">
-            <BsArrowLeftCircleFill className=" arrow arrow-left" />
+        <div className="container">
+            <BsArrowLeftCircleFill 
+            onClick={handlePrevious}
+            className="arrow arrow-left" />
 
             {
-                images && images.length ?
-                    images.map(imageItem => (
+                images && images.length 
+                ? images.map(imageItem => (
                         <img
-                        key ={imageItem.id}
-
+                            key={imageItem.id}
+                            alt={imageItem.download_url}
+                            src={imageItem.download_url}
+                            className="current-image"
                         />
 
 
                     ))
 
                     : null
-
-
-
             }
-            <BsArrowRightCircleFill />
+            <BsArrowRightCircleFill 
+            onClick={handleNext}
+            className="arrow arrow-right" />
+            <span className="circle-indicators">
+                {
+                    images && images.length ?
+                        images.map((_, index) => (
+                        <button
+                            key={index}
+                            className="current-indicator"
+
+                        ></button>)
+                        )
+                        : null
+                }
+            </span>
         </div>
     )
 
