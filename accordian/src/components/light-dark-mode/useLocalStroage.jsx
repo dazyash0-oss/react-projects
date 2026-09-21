@@ -9,6 +9,8 @@ export default function useLocalStroage(key, defaultValue) {
       currentValue = JSON.parse(
         localStorage.getItem(key) || String(defaultValue)
       );
+
+      
     } catch (error) {
       console.log(error);
       currentValue = defaultValue;

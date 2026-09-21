@@ -4,10 +4,11 @@ import './App.css'
 import Accordion from './components/accordian'
 import RandomColor from './components/random-color'
 import StarRating from './components/stra-rating'
-import  ImageSlider  from './components/image-slider'
+import ImageSlider from './components/image-slider'
 import LoadMoreData from './components/load-more-data'
 import QRCodeGenerator from './components/qr-code-generator'
 import LightDarkMode from './components/light-dark-mode'
+import ScrollIndicator from './components/scroll-indicator'
 
 
 
@@ -21,9 +22,9 @@ function App() {
 
       {/* random color component */}
       {/* <RandomColor/> */}
-{/* 
+      {/* 
       <StarRating noOfStars={10}/> */}
-   
+
 
       {/* image slider */}
 
@@ -36,8 +37,12 @@ function App() {
 
 
 
+      {/* 
+<LightDarkMode/> */}
 
-<LightDarkMode/>
+
+ <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+
 
     </>
   )
