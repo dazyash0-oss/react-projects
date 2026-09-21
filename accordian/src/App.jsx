@@ -6,6 +6,7 @@ import RandomColor from './components/random-color'
 import StarRating from './components/stra-rating'
 import  ImageSlider  from './components/image-slider'
 import LoadMoreData from './components/load-more-data'
+import QRCodeGenerator from './components/qr-code-generator'
 
 
 
@@ -25,11 +26,12 @@ function App() {
 
       {/* image slider */}
 
-      <ImageSlider url={'https://picsum.photos/v2/list'} 
+      {/* <ImageSlider url={'https://picsum.photos/v2/list'} 
       limit={'10'} page={'1'} />
 
 
-      <LoadMoreData/>
+      <LoadMoreData/> */}
+      <QRCodeGenerator/>
     </>
   )
 }
