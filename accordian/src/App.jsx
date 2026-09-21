@@ -7,6 +7,7 @@ import StarRating from './components/stra-rating'
 import  ImageSlider  from './components/image-slider'
 import LoadMoreData from './components/load-more-data'
 import QRCodeGenerator from './components/qr-code-generator'
+import LightDarkMode from './components/light-dark-mode'
 
 
 
@@ -31,7 +32,13 @@ function App() {
 
 
       <LoadMoreData/> */}
-      <QRCodeGenerator/>
+      {/* <QRCodeGenerator/> */}
+
+
+
+
+<LightDarkMode/>
+
     </>
   )
 }
